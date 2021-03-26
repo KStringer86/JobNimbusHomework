@@ -26,6 +26,11 @@ def clean_string(testString):
 
 class TestBracketsMethods(unittest.TestCase):
 
+    def test_clean_string(self):
+        self.assertEqual(clean_string("{HelloWorld}"), "{}", 'Not all characters removed')
+        self.assertEqual(clean_string("{1234567890}"), "{}", 'Not all characters removed')
+        self.assertEqual(clean_string("{!@#$%^&*()_+-=`~<>,.:[]}?/|;)"), "{}", 'Not all characters removed')
+
     def test_check_braces(self):
         self.assertTrue(check_braces("{}"), 'check_braces method not calculated correctly')
         self.assertFalse(check_braces("}{"), 'check_braces method not calculated correctly')
