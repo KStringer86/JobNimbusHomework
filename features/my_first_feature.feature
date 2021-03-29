@@ -1,4 +1,4 @@
-Feature: Main Test Featrue
+Feature: Main Login Feature
 
     Scenario: User logs in successfully 
       Given I am on the Homepage
